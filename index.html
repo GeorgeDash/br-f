@@ -5,20 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="build/css/style.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="/build/js/hamburgerToggle.js"></script>
         <title>Br.F</title>
     </head>
 
     <body class="min-h-screen w-full flex flex-col items-center justify-center overflow-x-hidden">
         <header class="w-full h-28 flex justify-center sm:bg-white lg:bg-transparent lg:backdrop-blur-sm z-[9999] fixed top-0 sm:px-3 lg:px-0">
             <div class="wrapper sm:w-full lg:w-[95%] flex items-center justify-between">
-                <h1 class="w-[225px] text-4xl font-extrabold uppercase">
+                <h1 class="lg:w-[225px] text-4xl font-extrabold uppercase">
                     <a href="index.html">BR.<span class="text-gray">F</span></a>
                 </h1>
                 <div class="h-auto relative flex items-center justify-center" id="search-box">
                     <input type="text" name="search" placeholder="Search..." autocomplete="off" id="search" class="h-[50px] w-[370px] bg-merino text-gray rounded-xl caret-gray transition-all duration-375 outline-none focus:w-[400px] focus:shadow-lg pl-16">
                     <i class='bx bx-search text-[1.75rem] text-gray absolute left-5'></i>
                 </div>
-                <div id="profile-wrapper" class="w-[225px] sm:hidden md:flex items-center md:justify-end lg:justify-between">
+                <div id="profile-wrapper" class="w-[225px] sm:hidden lg:flex items-center lg:justify-between">
                     <div id="icons-wrapper" class="w-[150px] items-center justify-around font-medium sm:hidden lg:flex">
                         <a href="#" id="cart" class="flex flex-col items-center justify-center relative transition-all duration-375 hover:text-arylide">
                                 <i class='bx bx-shopping-bag text-3xl relative'></i>
@@ -34,11 +35,14 @@
                     </div>
                     <img src="/build/img/profile.jpg" alt="profile" class="size-14 cursor-pointer rounded-full">
                 </div>
+                <button onclick="hamburgerToggle()" id="hamburger-toggle" aria-expanded="false" class="block md:hidden text-4xl">
+                    <i class='bx bx-menu'></i>
+                </button>
             </div>
         </header>
         <main class="w-[95%] min-h-screen mt-28">
-            <div id="categories" class="w-full h-14 flex items-center sm:justify-center lg:justify-start border-b-[2px] border-b-merino">
-                <ul class="w-auto h-auto flex flex-wrap justify-center space-x-[40px] font-medium" id="main-nav">
+            <div id="categories" class="w-full h-14 sm:hidden md:flex items-center sm:justify-center md:justify-start border-b-[2px] border-b-merino">
+                <ul class="flex flex-wrap justify-center space-x-[40px] font-medium" id="main-nav">
                     <li>
                         <a href="#" class="relative after:absolute after:-bottom-[5px] after:left-0 after:content-[''] after:h-[1.5px] after:w-full after:opacity-0 after:bg-black hover:after:opacity-100 after:transition-all after:duration-375">Women</a>
                     </li>
@@ -180,7 +184,7 @@
             </div>
             <div id="comments-rating-ad" class="w-full flex sm:flex-col md:flex-row items-center justify-between mt-[72px]">
                 <div id="comments" class="h-full sm:w-full md:w-3/5">
-                    <div class="heading-wrapper w-full flex justify-start space-x-7 text-4xl font-bold text-dawn mb-10">
+                    <div class="heading-wrapper w-full flex justify-start space-x-7 sm:text-2xl md:text-4xl font-bold text-dawn mb-10">
                         <a href="#" class="transition-all duration-375 hover:text-black">Details</a>
                         <a href="#" class="text-black">Reviews</a>
                         <a href="#" class="transition-all duration-375 hover:text-black">Discussion</a>
@@ -302,9 +306,9 @@
                             <h6 class="text-sm font-bold">1</h6>
                         </div>
                     </div>
-                    <div id="ad" class="w-full bg-[#d7d2bf] sm:text-center lg:text-left rounded-lg px-7 py-8 mt-16">
-                        <h2 class="font-bold text-3xl leading-normal">Popular brands with discounts over 25%</h2>
-                        <div id="brands" class="w-fit flex items-center -space-x-2 mt-3">
+                    <div id="ad" class="w-full bg-[#d7d2bf] sm:text-center xl:text-left rounded-lg px-7 py-8 mt-16">
+                        <h2 class="font-bold sm:text-xl  2xl:text-3xl leading-normal">Popular brands with discounts over 25%</h2>
+                        <div id="brands" class="w-fit flex items-center -space-x-2 mt-3 relative sm:left-1/2 sm:-translate-x-1/2 md:left-0 md:translate-x-0">
                             <img src="/build/img/logo.jpg" alt="reebok" class="size-8 rounded-full">
                             <img src="/build/img/brands/lacoste.jpeg" alt="lacoste" class="size-8 rounded-full">
                             <img src="/build/img/brands/asics.jpeg" alt="asics" class="size-8 rounded-full">
