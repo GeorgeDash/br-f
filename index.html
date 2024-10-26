@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth text-[16px]">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="build/css/style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <title>Br.F</title>
+    </head>
+
+    <body class="min-h-screen w-full flex flex-col items-center justify-center overflow-x-hidden">
+        <header class="w-[95%] h-28 bg-white z-[9999] flex items-center justify-between fixed top-0">
+            <h1 class="w-[225px] text-4xl font-extrabold uppercase">
+                <a href="index.html">BR.<span class="text-gray">F</span></a>
+            </h1>
+            <div class="h-auto relative flex items-center justify-center" id="search-box">
+                <input type="text" name="search" placeholder="Search..." autocomplete="off" id="search" class="h-[50px] w-[370px] bg-merino text-gray rounded-xl caret-gray transition-all duration-375 outline-none focus:w-[400px] focus:shadow-lg pl-16">
+                <i class='bx bx-search text-[1.75rem] text-gray absolute left-5'></i>
+            </div>
+            <div id="profile-wrapper" class="w-[225px] sm:hidden md:flex items-center md:justify-end lg:justify-between">
+                <div id="icons-wrapper" class="w-[150px] items-center justify-around font-medium sm:hidden lg:flex">
+                    <a href="#" id="cart" class="flex flex-col items-center justify-center relative transition-all duration-375 hover:text-arylide">
+                            <i class='bx bx-shopping-bag text-3xl relative'></i>
+                            <div class="size-5 bg-arylide text-black font-medium rounded-full absolute left-4 -top-2">
+                                <p class="absolute left-1/2 -translate-x-1/2 bottom-1/2 translate-y-1/2">4</p>
+                            </div>
+                        <h6>Cart</h6>
+                    </a>
+                    <a href="#" id="favorites" class="flex flex-col justify-center items-center transition-all duration-375 hover:text-peach">
+                        <i class='bx bx-heart text-3xl'></i>
+                        <h6>Favorites</h6>
+                    </a>
+                </div>
+                <img src="/build/img/profile.jpg" alt="profile" class="size-14 cursor-pointer rounded-full">
+            </div>
+        </header>
+        <main class="w-[95%] min-h-screen mt-28">
+            <div id="categories" class="w-full h-14 flex items-center sm:justify-center lg:justify-start border-b-[2px] border-b-merino">
+                <ul class="w-auto h-auto flex justify-center space-x-[40px] font-medium">
+                    <li>
+                        <a href="#" class="relative after:absolute after:-bottom-[5px] after:left-0 after:content-[''] after:h-[1.5px] after:w-full after:opacity-0 after:bg-black hover:after:opacity-100 after:transition-all after:duration-375">Women</a>
+                    </li>
+                    <li>
+                        <a href="#" class="relative after:absolute after:-bottom-[5px] after:left-0 after:content-[''] after:h-[1.5px] after:w-full after:opacity-0 after:bg-black hover:after:opacity-100 after:transition-all after:duration-375">Men</a>
+                    </li>
+                    <li>
+                        <a href="#" class="relative after:absolute after:-bottom-[5px] after:left-0 after:content-[''] after:h-[1.5px] after:w-full after:opacity-0 after:bg-black hover:after:opacity-100 after:transition-all after:duration-375">Kids</a>
+                    </li>
+                    <li>
+                        <a href="#" class="relative after:absolute after:-bottom-[5px] after:left-0 after:content-[''] after:h-[1.5px] after:w-full after:opacity-0 after:bg-black hover:after:opacity-100 after:transition-all after:duration-375">Sports</a>
+                    </li>
+                    <li>
+                        <a href="#" class="relative after:absolute after:-bottom-[5px] after:left-0 after:content-[''] after:h-[1.5px] after:w-full after:opacity-0 after:bg-black hover:after:opacity-100 after:transition-all after:duration-375">Brands</a>
+                    </li>
+                    <li>
+                        <a href="#" class="relative after:absolute after:-bottom-[5px] after:left-0 after:content-[''] after:h-[1.5px] after:w-full after:opacity-0 after:bg-black hover:after:opacity-100 after:transition-all after:duration-375">New</a>
+                    </li>
+                    <li>
+                        <a href="#" class="relative text-peach after:absolute after:-bottom-[5px] after:left-0 after:content-[''] after:h-[1.5px] after:w-full after:opacity-0 after:bg-peach hover:after:opacity-100 after:transition-all after:duration-375">Sale</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="product-wrapper" class="w-full h-full flex justify-between">
+                <div id="gallery" class="h-full w-1/2">
+                    <div id="breadcrumb-wrapper" class="w-fit h-auto flex items-center pt-[35px]">
+                        <p>
+                            <a href="#" class="relative after:absolute after:-bottom-[1px] after:left-0 after:content-[''] after:h-[1px] after:w-full after:opacity-0 after:bg-black hover:after:opacity-100 after:transition-all after:duration-375">Sports</a> <span class="text-dawn text-xl px-2">•</span> <a href="#" class="relative after:absolute after:-bottom-[1px] after:left-0 after:content-[''] after:h-[1px] after:w-full after:opacity-0 after:bg-black hover:after:opacity-100 after:transition-all after:duration-375">Clothes and shoes</a> <span class="text-dawn text-xl px-2">•</span> <a href="#" class="relative after:absolute after:-bottom-[1px] after:left-0 after:content-[''] after:h-[1px] after:w-full after:opacity-0 after:bg-black hover:after:opacity-100 after:transition-all after:duration-375">Shoes</a> <span class="text-dawn text-xl px-2">•</span> <a href="#" class="font-medium relative after:absolute after:-bottom-[5px] after:left-0 after:content-[''] after:h-[1.5px] after:w-full after:opacity-0 after:bg-black hover:after:opacity-100 after:transition-all after:duration-375">Reebok</a>
+                        </p>
+                    </div>
+                    <div id="cover" class="w-full">
+                        <img src="/build/img/gallery/cover.jpg" alt="cover" class="rounded-xl mt-7">
+                    </div>
+                    <div class="gallery-wrapper w-full flex flex-wrap sm:gap-5 3xl:gap-0 items-center sm:justify-center 3xl:justify-between mt-5">
+                        <a href="#">
+                            <img src="/build/img/gallery/cover.jpg" alt="image 1" class="w-[115px] h-[110px] rounded-xl border-2 border-black">
+                        </a>
+                        <a href="#">
+                            <img src="/build/img/gallery/image1.jpg" alt="image 2" class="w-[115px] h-[110px] rounded-xl">
+                        </a>
+                        <a href="#">
+                            <img src="/build/img/gallery/image2.jpg" alt="image 3" class="w-[115px] h-[110px] rounded-xl">
+                        </a>
+                        <a href="#">
+                            <img src="/build/img/gallery/image3.jpg" alt="image 4" class="w-[115px] h-[110px] rounded-xl">
+                        </a>
+                        <a href="#">
+                            <div class="w-[115px] h-[110px] flex items-center justify-center font-medium rounded-xl border border-merino">
+                                <p>+4 more</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div id="details-wrapper" class="w-2/5 h-full flex flex-col mt-[88px]">
+                    <div id="company" class="flex items-center justify-between">
+                        <a href="#" class="name flex items-center space-x-3">
+                            <img src="/build/img/logo.jpg" alt="logo" class="size-9 rounded-full">
+                            <h6 class="font-semibold">Reebok</h6>
+                        </a>
+                        <div class="serial text-gray">
+                            <h6>HR1325R0O-.-8</h6>
+                        </div>
+                    </div>
+                    <h2 class="text-4xl font-bold mt-7">Shoes Reebok Zig Kinetica 3</h2>
+                    <div id="rating" class="w-fit flex items-center mt-7">
+                        <div class="rating-wrapper text-arylide text-lg pr-3">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star text-dawn'></i>
+                        </div>
+                        <div class="reviews-count text-sm text-gray">
+                            <p>42 reviews</p>
+                        </div>
+                    </div>
+                    <h3 id="price" class="w-fit font-bold text-5xl mt-14">$199.00</h3>
+                    <div id="colors" class="w-fit flex flex-col mt-14">
+                        <p class="current-color font-bold">Color <span class="text-merino text-xl px-2">•</span> <span class="text-gray font-medium">White</span></p>
+                        <div class="colors-gallery w-[200px] flex justify-between mt-4">
+                            <a href="#">
+                                <img src="/build/img/gallery/cover.jpg" alt="white option" class="size-[60px] rounded-xl border">
+                            </a>
+                            <a href="#">
+                                <img src="/build/img/gray-option.jpg" alt="gray option" class="size-[60px] rounded-xl">
+                            </a>
+                            <a href="#">
+                                <img src="/build/img/black-option.jpg" alt="black option" class="size-[60px] rounded-xl">
+                            </a>
+                        </div>
+                    </div>
+                    <div id="size" class="w-full mt-11">
+                        <p class="font-bold">Size <span class="text-merino text-xl px-2">•</span> <span class="text-gray font-medium">EU Men</span></p>
+                        <div class="size-options w-full flex flex-wrap gap-4 mt-5">
+                            <a href="#" class="w-[80px] h-[45px] flex items-center justify-center text-black font-medium border-2 border-gray/[.25] rounded-md transition-all duration-375 hover:border-black hover:bg-black hover:text-white hover:font-normal">
+                                40.5
+                            </a>
+                            <a href="#" class="w-[80px] h-[45px] flex items-center justify-center text-white bg-black rounded-md">
+                                41
+                            </a>
+                            <a href="#" class="w-[80px] h-[45px] flex items-center justify-center text-black font-medium border-2 border-gray/[.25] rounded-md transition-all duration-375 hover:border-black hover:bg-black hover:text-white hover:font-normal">
+                                42
+                            </a>
+                            <a href="#" class="w-[80px] h-[45px] flex items-center justify-center text-black font-medium border-2 border-gray/[.25] rounded-md transition-all duration-375 hover:border-black hover:bg-black hover:text-white hover:font-normal">
+                                43
+                            </a>
+                            <a href="#" class="w-[80px] h-[45px] flex items-center justify-center text-black font-medium border-2 border-gray/[.25] rounded-md transition-all duration-375 hover:border-black hover:bg-black hover:text-white hover:font-normal">
+                                43.5
+                            </a>
+                            <a href="#" class="w-[80px] h-[45px] flex items-center justify-center text-black font-medium border-2 border-gray/[.25] rounded-md transition-all duration-375 hover:border-black hover:bg-black hover:text-white hover:font-normal">
+                                44
+                            </a>
+                            <a href="#" class="w-[80px] h-[45px] flex items-center justify-center text-black font-medium border-2 border-gray/[.25] rounded-md transition-all duration-375 hover:border-black hover:bg-black hover:text-white hover:font-normal">
+                                44.5
+                            </a>
+                            <a href="#" class="w-[80px] h-[45px] flex items-center justify-center text-black font-medium border-2 border-gray/[.25] rounded-md transition-all duration-375 hover:border-black hover:bg-black hover:text-white hover:font-normal">
+                                45
+                            </a>
+                            <a href="#" class="w-[80px] h-[45px] flex items-center justify-center text-black font-medium border-2 border-gray/[.25] rounded-md transition-all duration-375 hover:border-black hover:bg-black hover:text-white hover:font-normal">
+                                46
+                            </a>
+                        </div>
+                        <p class="text-sm font-medium text-[#beb180] mt-3">Size guide</p>
+                    </div>
+                    <div id="action-buttons" class="flex items-center sm:justify-evenly lg:justify-between mt-10">
+                        <button class="h-[60px] sm:size-[60px] lg:w-4/5 bg-black text-white text-lg font-medium rounded-xl" id="add-to-cart">
+                            <p class="flex items-center justify-center">
+                                <i class='bx bx-shopping-bag text-2xl lg:pr-2'></i><span class="sm:hidden lg:inline-block">Add to cart</span>
+                            </p>
+                        </button>
+                        <button class="size-[59px] bg-merino rounded-xl flex items-center justify-center" id="save-to-favorites">
+                            <i class='bx bx-heart text-2xl'></i>
+                        </button>
+                    </div>
+                    <p class="flex items-center font-medium mt-4">
+                        <i class='bx bxs-truck text-2xl pr-3'></i> Free delivery on orders over $30.00
+                    </p>
+                </div>
+            </div>
+            <div id="comments-rating-ad" class="w-full h-[780px] mt-[72px]">
+                <div class="heading-wrapper w-[35%] flex justify-between text-4xl font-bold text-dawn">
+                    <a>Details</a>
+                    <a class="text-black">Reviews</a>
+                    <a>Discussion</a>
+                </div>
+                <div class="wrapper h-full flex justify-between mt-10">
+                    <div id="comments" class="h-full w-3/5">
+                        <button id="filters" class="w-[200px] flex justify-between items-center border border-gray/[.3] rounded-md p-3">
+                            <p>Newest</p>
+                            <i class='bx bx-chevron-down text-3xl'></i>
+                        </button>
+                        <div id="top-comment" class="w-full border-b border-gray/[.5] pb-7 mt-7">
+                            <div class="profile w-fit flex justify-between">
+                                <img src="/build/img/profiles/helen.jpg" alt="helen m" class="rounded-full size-10 mr-2">
+                                <div class="name-review">
+                                    <p class="font-semibold text-sm">Helen M. <span class="text-xs text-gray">Yesterday</span></p>
+                                    <div class="rating-wrapper text-arylide text-sm mt-1">
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="desc w-fit font-medium ml-12 my-4">Excellent running shoes. It turns very sharply on the foot.</h4>
+                            <div class="comment-actions w-[200px] flex items-center space-x-5 ml-12">
+                                <a href="#" class="text-sm font-medium text-[#beb180] relative after:absolute after:-bottom-[2px] after:left-0 after:content-[''] after:h-[1px] after:w-full after:opacity-0 after:bg-[#beb180] hover:after:opacity-100 after:transition-all after:duration-375">Reply</a>
+                                <div class="w-fit like-dislike flex space-x-3">
+                                    <a href="#" class="flex items-center text-sm"><i class='bx bx-like text-gray text-md pr-1'></i> 42</a>
+                                    <a href="#" class="flex items-center text-sm"><i class='bx bx-dislike text-gray text-md pr-1'></i> 0</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="second-comment" class="w-full pb-7 mt-7">
+                            <div class="profile w-fit flex justify-between">
+                                <img src="/build/img/profiles/ann.jpg" alt="ann d" class="rounded-full size-10 mr-2">
+                                <div class="name-review">
+                                    <p class="font-semibold text-sm">Ann D. <span class="text-xs text-gray">2 days ago</span></p>
+                                    <div class="rating-wrapper text-arylide text-sm mt-1">
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star text-gray/[.5]'></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="desc w-fit font-medium ml-12 my-4">Good shoes</h4>
+                            <div class="comment-actions w-[200px] flex items-center space-x-5 ml-12">
+                                <a href="#" class="text-sm font-medium text-[#beb180] relative after:absolute after:-bottom-[2px] after:left-0 after:content-[''] after:h-[1px] after:w-full after:opacity-0 after:bg-[#beb180] hover:after:opacity-100 after:transition-all after:duration-375">Reply</a>
+                                <div class="w-fit like-dislike flex space-x-3">
+                                    <a href="#" class="flex items-center text-sm"><i class='bx bx-like text-gray text-md pr-1'></i> 35</a>
+                                    <a href="#" class="flex items-center text-sm"><i class='bx bx-dislike text-gray text-md pr-1'></i> 2</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="reply" class="w-full pb-7 mt-3.5 ml-12">
+                            <div class="profile w-fit flex justify-between">
+                                <img src="/build/img/profiles/andrew.jpg" alt="andrew g" class="rounded-full size-10 mr-2">
+                                <div class="name-review flex items-center">
+                                    <p class="font-semibold text-sm">Andrew G. <span class="text-xs text-gray">2 days ago</span></p>
+                                </div>
+                            </div>
+                            <h4 class="desc w-fit font-medium ml-12">Is it suitable for running?</h4>
+                        </div>
+                        <hr class="border-gray/[.5]">
+                    </div>
+                    <div id="rating-ad" class="h-full w-1/5">
+                        <div id="overall-rating" class="w-full flex justify-between items-center border-b-2 border-b-gray/[.15] pb-6 mb-6">
+                            <div class="rating-wrapper text-arylide text-3xl">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                            <h3 class="text-3xl font-bold">4.8</h3>
+                        </div>
+                        <div id="statistics" class="w-full flex flex-col items-center space-y-2">
+                            <div class="rating-count w-full flex items-center justify-between">
+                                <h6 class="text-gray text-sm font-medium w-[10px]">5</h6>
+                                <div class="visualisation w-[235px] h-3 bg-[linear-gradient(90deg,#edcf5d_0%,#edcf5d_80%,#ebebeb_80%,#ebebeb_80%)] rounded-sm mx-3"></div>
+                                <h6 class="text-sm font-bold w-[17.23px] text-right">28</h6>
+                            </div>
+                            <div class="rating-count w-full flex items-center justify-between">
+                                <h6 class="text-gray text-sm font-medium w-[10px]">4</h6>
+                                <div class="visualisation w-[235px] h-3 bg-[linear-gradient(90deg,#edcf5d_0%,#edcf5d_40%,#ebebeb_40%,#ebebeb_40%)] rounded-sm mx-3"></div>
+                                <h6 class="text-sm font-bold w-[17.23px] text-right">9</h6>
+                            </div>
+                            <div class="rating-count w-full flex items-center justify-between">
+                                <h6 class="text-gray text-sm font-medium w-[10px]">3</h6>
+                                <div class="visualisation w-[235px] h-3 bg-[linear-gradient(90deg,#edcf5d_0%,#edcf5d_20%,#ebebeb_20%,#ebebeb_20%)] rounded-sm mx-3"></div>
+                                <h6 class="text-sm font-bold w-[17.23px] text-right">4</h6>
+                            </div>
+                            <div class="rating-count w-full flex items-center justify-between">
+                                <h6 class="text-gray text-sm font-medium w-[10px]">2</h6>
+                                <div class="visualisation w-[235px] h-3 bg-[linear-gradient(90deg,#edcf5d_0%,#edcf5d_6%,#ebebeb_6%,#ebebeb_6%)] rounded-sm mx-3"></div>
+                                <h6 class="text-sm font-bold w-[17.23px] text-right">1</h6>
+                            </div>
+                            <div class="rating-count w-full flex items-center justify-between">
+                                <h6 class="text-gray text-sm font-medium w-[10px]">1</h6>
+                                <div class="visualisation w-[235px] h-3 bg-[linear-gradient(90deg,#edcf5d_0%,#edcf5d_6%,#ebebeb_6%,#ebebeb_6%)] rounded-sm mr-3"></div>
+                                <h6 class="text-sm font-bold">1</h6>
+                            </div>
+                        </div>
+                        <div id="ad" class="w-full bg-[#d7d2bf] rounded-lg px-7 py-8 mt-16">
+                            <h2 class="font-bold text-3xl leading-normal">Popular brands with discounts over 25%</h2>
+                            <div id="brands" class="w-fit flex items-center -space-x-2 mt-3">
+                                <img src="/build/img/logo.jpg" alt="reebok" class="size-8 rounded-full">
+                                <img src="/build/img/logo.jpg" alt="reebok" class="size-8 rounded-full">
+                                <img src="/build/img/brands/asics.jpeg" alt="asics" class="size-8 rounded-full">
+                                <img src="/build/img/brands/north-face.svg" alt="reebok" class="size-8 rounded-full">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div id="related" class="w-full h-[400px] mt-20 mb-[75px]">
+                <div class="heading-wrapper w-full flex items-center justify-between">
+                    <h2 class="text-5xl font-bold">Related products</h2>
+                    <div class="controls-wrapper w-24 flex items-center justify-between">
+                        <div id="prev" class="size-10 flex items-center justify-center border border-dawn text-dawn rounded-md">
+                            <i class='bx bxs-chevron-left text-2xl'></i>
+                        </div>
+                        <a href="#" id="next" class="size-10 border flex items-center justify-center rounded-md hover:bg-black hover:text-white transition-all duration-375">
+                            <i class='bx bxs-chevron-right text-2xl'></i>
+                        </a>
+                    </div>
+                </div>
+                <div id="cards" class="w-full h-[300px] flex items-center justify-between mt-10">
+                    <div class="card w-[250px] h-full bg-merino rounded-md flex flex-col items-center justify-center relative" id="adidas">
+                        <div class="color-options h-8 w-12 flex items-center justify-evenly absolute top-3 right-3">
+                            <a href="#" class="size-3 bg-[#e2855e] rounded-full"></a>
+                            <a href="#" class="size-3 bg-[#cad275] rounded-full"></a>
+                        </div>
+                        <img src="/build/img/related/adidas.png" alt="adidas yeezy boost 700" class="w-[90%]">
+                        <h2 class="text-md mt-7 font-medium">Adidas Yeezy Boost 700</h2>
+                        <h3 class="text-2xl font-bold mt-4">$149.15</h3>
+                    </div>
+                    <div class="card w-[250px] h-full bg-merino rounded-md flex flex-col items-center justify-center relative" id="new-balance">
+                        <div class="color-options h-8 w-12 flex items-center justify-evenly absolute top-3 right-3">
+                            <a href="#" class="size-3 bg-white rounded-full"></a>
+                            <a href="#" class="size-3 bg-black rounded-full"></a>
+                        </div>
+                        <img src="/build/img/related/new-balance.png" alt="adidas yeezy boost 700" class="w-[90%]">
+                        <h2 class="text-md mt-7 font-medium">New Balance BB550</h2>
+                        <h3 class="text-2xl font-bold mt-4">$210.00</h3>
+                    </div>
+                    <div class="card w-[250px] h-full bg-merino rounded-md flex flex-col items-center justify-center relative" id="adidas">
+                        <div class="color-options h-8 w-12 flex items-center justify-evenly absolute top-3 right-3">
+                            <a href="#" class="size-3 bg-[#d1c1b2] rounded-full"></a>
+                            <a href="#" class="size-3 bg-[#564d4c] rounded-full"></a>
+                        </div>
+                        <img src="/build/img/related/asycs.png" alt="adidas yeezy boost 700" class="w-[90%]">
+                        <h2 class="text-md mt-7 font-medium">ASICS Gel-Lyte III OG</h2>
+                        <h3 class="text-2xl font-bold mt-4">$196.50</h3>
+                    </div>
+                    <div class="card w-[250px] h-full bg-merino rounded-md flex flex-col items-center justify-center relative" id="adidas">
+                        <div class="color-options h-8 w-12 flex items-center justify-evenly absolute top-3 right-3">
+                            <a href="#" class="size-3 bg-[#e2855e] rounded-full"></a>
+                            <a href="#" class="size-3 bg-[#cad275] rounded-full"></a>
+                        </div>
+                        <img src="/build/img/related/adidas.png" alt="adidas yeezy boost 700" class="w-[90%]">
+                        <h2 class="text-md mt-7 font-medium">Adidas Yeezy Boost 700</h2>
+                        <h3 class="text-2xl font-bold mt-4">$149.15</h3>
+                    </div>
+                </div>
+            </div> -->
+        </main>
+    </body>
+</html>
