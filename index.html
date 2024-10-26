@@ -16,8 +16,8 @@
                     <a href="index.html">BR.<span class="text-gray">F</span></a>
                 </h1>
                 <div class="h-auto relative flex items-center justify-center" id="search-box">
-                    <input type="text" name="search" placeholder="Search..." autocomplete="off" id="search" class="h-[50px] w-[370px] bg-merino text-gray rounded-xl caret-gray transition-all duration-375 outline-none focus:w-[400px] focus:shadow-lg pl-16">
-                    <i class='bx bx-search text-[1.75rem] text-gray absolute left-5'></i>
+                    <input type="text" name="search" placeholder="Search..." autocomplete="off" id="search" class="h-[50px] w-[370px] sm:hidden md:block bg-merino text-gray rounded-xl caret-gray transition-all duration-375 outline-none focus:w-[400px] focus:shadow-lg pl-16">
+                    <i class='bx bx-search sm:!hidden md:!block text-[1.75rem] text-gray absolute left-5'></i>
                 </div>
                 <div id="profile-wrapper" class="w-[225px] sm:hidden lg:flex items-center lg:justify-between">
                     <div id="icons-wrapper" class="w-[150px] items-center justify-around font-medium sm:hidden lg:flex">
@@ -40,7 +40,7 @@
                 </button>
             </div>
         </header>
-        <main class="w-[95%] min-h-screen mt-28">
+        <main class="w-[95%] max-w-screen-3xl min-h-screen flex flex-col justify-center items-center mt-28">
             <div id="categories" class="w-full h-14 sm:hidden md:flex items-center sm:justify-center md:justify-start border-b-[2px] border-b-merino">
                 <ul class="flex flex-wrap justify-center space-x-[40px] font-medium" id="main-nav">
                     <li>
@@ -66,7 +66,7 @@
                     </li>
                 </ul>
             </div>
-            <div id="product-wrapper" class="w-full h-full flex sm:flex-col md:flex-row sm:items-center md:items-start justify-between">
+            <div id="product-wrapper" class="max-w-screen-3xl h-full flex sm:flex-col md:flex-row sm:items-center md:items-start justify-between">
                 <div id="gallery" class="h-full sm:w-full md:w-1/2">
                     <div id="breadcrumb-wrapper" class="w-fit h-auto flex items-center pt-[35px]">
                         <p>
