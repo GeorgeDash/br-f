@@ -42,7 +42,7 @@
         </header>
         <main class="w-[95%] max-w-screen-3xl min-h-screen flex flex-col justify-center items-center mt-28">
             <div id="categories" class="w-full h-14 sm:hidden md:flex items-center sm:justify-center md:justify-start border-b-[2px] border-b-merino">
-                <ul class="flex flex-wrap justify-center space-x-[40px] font-medium" id="main-nav">
+                <ul class="w-full md:w-fit flex sm:justify-around sm:space-x-1 sm-m:space-x-2 sm-l:space-x-4 md:space-x-[40px] sm:text-sm sm-l:text-md font-medium" id="main-nav">
                     <li>
                         <a href="#" class="relative after:absolute after:-bottom-[5px] after:left-0 after:content-[''] after:h-[1.5px] after:w-full after:opacity-0 after:bg-black hover:after:opacity-100 after:transition-all after:duration-375">Women</a>
                     </li>
@@ -184,7 +184,7 @@
             </div>
             <div id="comments-rating-ad" class="w-full flex sm:flex-col md:flex-row items-center justify-between mt-[72px]">
                 <div id="comments" class="h-full sm:w-full md:w-3/5">
-                    <div class="heading-wrapper w-full flex justify-start space-x-7 sm:text-2xl md:text-4xl font-bold text-dawn mb-10">
+                    <div class="heading-wrapper w-full flex justify-start space-x-7 sm:text-xl sm-m:text-2xl md:text-4xl font-bold text-dawn mb-10">
                         <a href="#" class="transition-all duration-375 hover:text-black">Details</a>
                         <a href="#" class="text-black">Reviews</a>
                         <a href="#" class="transition-all duration-375 hover:text-black">Discussion</a>
@@ -246,6 +246,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="connector"></div>
                     <div id="reply" class="w-[calc(100%-48px)] pb-7 mt-3.5 ml-12">
                         <div class="profile w-fit flex justify-between">
                             <img src="/build/img/profiles/andrew.jpg" alt="andrew g" class="rounded-full size-10 mr-2">
@@ -341,7 +342,7 @@
                         </div>
                         <img src="/build/img/related/adidas.png" alt="adidas yeezy boost 700" class="w-full relative bottom-6">
                         <h2 class="text-md font-medium">Adidas Yeezy Boost 700</h2>
-                        <h3 class="text-2xl font-bold mt-4 relative bottom-3">$149.15</h3>
+                        <h3 class="text-2xl font-bold mt-4">$205.00</h3>
                     </div>
                     <div class="card w-[250px] h-[300px] bg-merino rounded-md flex flex-col items-center justify-center relative" id="new-balance">
                         <div class="color-options h-8 w-12 flex items-center justify-center space-x-1 absolute top-3 right-3">
@@ -349,7 +350,7 @@
                             <a href="#" class="size-3 bg-[#f66a6a] rounded-full"></a>
                             <a href="#" class="size-3 bg-black rounded-full"></a>
                         </div>
-                        <img src="/build/img/related/new-balance.png" alt="adidas yeezy boost 700" class="w-[90%]">
+                        <img src="/build/img/related/new-balance.png" alt="new balance bb550" class="w-[90%]">
                         <h2 class="text-md mt-7 font-medium">New Balance BB550</h2>
                         <h3 class="text-2xl font-bold mt-4">$210.00</h3>
                     </div>
@@ -358,7 +359,7 @@
                             <a href="#" class="size-3 bg-[#d1c1b2] rounded-full"></a>
                             <a href="#" class="size-3 bg-[#71c291] rounded-full"></a>
                         </div>
-                        <img src="/build/img/related/asycs.png" alt="adidas yeezy boost 700" class="w-[90%]">
+                        <img src="/build/img/related/asycs.png" alt="asics gel-lyte III OG" class="w-[90%]">
                         <h2 class="text-md mt-7 font-medium">ASICS Gel-Lyte III OG</h2>
                         <h3 class="text-2xl font-bold mt-4">$196.50</h3>
                     </div>
@@ -367,7 +368,7 @@
                             <a href="#" class="size-3 bg-white rounded-full"></a>
                             <a href="#" class="size-3 bg-black rounded-full"></a>
                         </div>
-                        <img src="/build/img/related/reebok.png" alt="adidas yeezy boost 700" class="w-[90%]">
+                        <img src="/build/img/related/reebok.png" alt="reebok classic leather" class="w-[90%]">
                         <h2 class="text-md font-medium relative top-4">Reebok Classic Leather</h2>
                         <h3 class="text-2xl font-bold mt-8">$149.15</h3>
                     </div>
@@ -375,13 +376,13 @@
             </div>
         </main>
         <footer class="w-full flex justify-center bg-[#eff3f4] mt-20 sm:pt-10 xl:py-10 xl:pl-10 xl:pr-56">
-            <div class="wrapper w-[95%] flex justify-between">
+            <div class="wrapper w-[95%] flex flex-col sm-xl:flex-row justify-between">
                 <h2 class="text-4xl font-extrabold uppercase">
                     <a href="index.html">BR.<span class="text-gray">F</span></a>
                 </h2>
-                <nav id="shop">
+                <nav id="shop" class="hidden md:block">
                     <h3 class="text-2xl font-bold mb-5">Shop</h3>
-                    <ul class="w-fit flex flex-col justify-center space-y-5 font-medium" id="footer-nav">
+                    <ul class="w-fit flex flex-col justify-center sm-xl:space-y-5 text-sm font-medium">
                         <li>
                             <a href="#" class="relative after:absolute after:-bottom-[5px] after:left-0 after:content-[''] after:h-[1.5px] after:w-full after:opacity-0 after:bg-black hover:after:opacity-100 after:transition-all after:duration-375">Women</a>
                         </li>
@@ -403,8 +404,8 @@
                     </ul>
                 </nav>
                 <nav id="company">
-                    <h3 class="text-2xl font-bold mb-5">Company</h3>
-                    <ul class="w-fit flex flex-col justify-center space-y-5 font-medium" id="footer-nav">
+                    <h3 class="text-2xl font-bold mb-2 mt-6 sm-xl:mb-5 sm-xl:mt-0">Company</h3>
+                    <ul class="w-full sm-xl:w-fit flex flex-row sm-xl:flex-col justify-start space-x-8 sm-xl:justify-center sm-xl:space-x-0 sm-xl:space-y-5 sm:text-xs sm-l:text-sm font-medium">
                         <li>
                             <a href="#" class="relative after:absolute after:-bottom-[5px] after:left-0 after:content-[''] after:h-[1.5px] after:w-full after:opacity-0 after:bg-black hover:after:opacity-100 after:transition-all after:duration-375">About us</a>
                         </li>
@@ -423,8 +424,8 @@
                     </ul>
                 </nav>
                 <nav id="support">
-                    <h3 class="text-2xl font-bold mb-5">Support</h3>
-                    <ul class="w-fit flex flex-col justify-center space-y-5 font-medium" id="footer-nav">
+                    <h3 class="text-2xl font-bold mb-2 mt-6 sm-xl:mb-5 sm-xl:mt-0">Support</h3>
+                    <ul class="w-full sm-xl:w-fit flex flex-row sm-xl:flex-col justify-center space-x-8 sm-xl:justify-center sm-xl:space-x-0 sm-xl:space-y-5 sm:text-xs sm-l:text-sm font-medium">
                         <li>
                             <a href="#" class="relative after:absolute after:-bottom-[5px] after:left-0 after:content-[''] after:h-[1.5px] after:w-full after:opacity-0 after:bg-black hover:after:opacity-100 after:transition-all after:duration-375">Help</a>
                         </li>
@@ -443,7 +444,7 @@
                     </ul>
                 </nav>
                 <div id="contacts">
-                    <h3 class="text-2xl font-bold mb-5">Contacts</h3>
+                    <h3 class="text-2xl font-bold mb-2 mt-10 sm-xl:mb-5 sm-xl:mt-0">Contacts</h3>
                     <p class="font-medium">+44 740 438-02-65</p>
                     <div id="social-media" class="flex items-center space-x-4 text-2xl mt-3 text-gray">
                         <a href="https://twitter.com/ronasit" class="transition-all duration-375 hover:text-arylide">
@@ -459,6 +460,9 @@
                             <i class='bx bxl-youtube'></i>
                         </a>
                     </div>
+                </div>
+                <div id="map" class="w-full flex justify-center min-[576px]:hidden rounded-xl mt-20 mb-10">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.530182946156!2d29.097810476328814!3d40.969869971355905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac651ecc3322f%3A0x4d1e86fcc4b0ffce!2sBRF%20Group!5e0!3m2!1sbg!2sbg!4v1730009269548!5m2!1sbg!2sbg" width="400" height="300" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </footer>

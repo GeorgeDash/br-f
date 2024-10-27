@@ -15,5 +15,9 @@ function hamburgerToggle() {
         } else {
             navElement.style.display = "none"; // Hide the navigation
         }
+    } else {
+        // Ensure navigation is displayed when viewport width is greater than 992px
+        navElement.style.display = "flex"; // Display navigation as flex
+        toggleElement.setAttribute("aria-expanded", "true"); // Optional: Set aria-expanded to true
     }
 }
