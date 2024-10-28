@@ -10,3 +10,19 @@
   font-display: swap;
   font-style: normal;
 }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+#scrollbar{
+  --progress: 0;
+  height: 3px;
+  background-color: #edcf5d;
+  width: var(--progress);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
